@@ -1,3 +1,240 @@
 body {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
     margin: 0;
-} 
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+header {
+    display: flex;
+    flex-direction:column;
+    width: 37.5rem;
+    margin: 0 auto;
+}
+
+header h1 {
+    background-color: white;
+    padding: 1rem;
+    text-align: center;
+    font-size: 2rem;
+    margin: 0;
+    color: #333;
+}
+
+.menu, .your-order {
+    display: flex;
+    margin: 0 auto;
+    padding: 0;
+    width: 37.5rem;
+    background-color: white;
+    flex-direction: column;
+}
+
+.menu h2, .your-order h2, .card-details h2 {
+    text-align: center;
+    margin: 0;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #ddd;
+    padding: 1.2rem;
+}
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    padding: 0.8rem 0 1.2rem 0;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+.menu-left {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+
+}
+.order-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.order-item {
+    font-size: 1.2rem;
+    color: #333;
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.order-left {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+.order-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.order-summary{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    width: 80%;
+    margin: 0 auto;
+    border-top: 1px solid #ddd;
+}
+.card-details {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.1rem;
+    width: 30rem;
+    margin: 0 auto;
+    padding: 1rem 0;
+    border-top: 1px solid #ddd;
+    background-color: white;
+}
+.card-details form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1.2rem 5rem;
+    border-radius: 5px;
+}
+.card-details label {
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.card-form input {
+    padding: 0.5rem;
+    margin: 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+
+.plusIcon, .menu-image, .menu-name{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.plusIcon {
+    font-size: 2rem;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.plusIcon:hover {
+    color: #111;
+    transform: scale(1.1);
+}
+
+.order-quantity {
+    font-weight: bold;
+    color: #555;
+}
+
+.removeIcon {
+    font-size: 1.2rem;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.removeIcon:hover {
+    color: #111;
+    transform: scale(1.1);
+}
+
+button {
+    background-color: #16DB99;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 1rem auto;
+    display: block;
+    width: 80%;
+}
+.order-button:hover {
+    background-color: #14B88D;
+}
+
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+}
+
+.hidden {
+  display: none !important;
+}
+
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5); /* semi-transparent overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.7rem;
+  width: 90%;
+  max-width: 30rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Optional animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.completed-order{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #16DB99;
+    padding: 2rem;
+    font-weight: bold;
+    text-align: center;
+    width: 80%;
+    height: 15rem;
+    background-color: white;
+    border-radius: 0.7rem;
+    animation: fadeIn 0.3s ease-in-out; 
+
+}

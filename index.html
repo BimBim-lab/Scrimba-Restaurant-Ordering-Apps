@@ -1,9 +1,76 @@
 <html>
     <head>
        <link rel="stylesheet" href="index.css">
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
     </head>
     <body>
-	<script src="index.js"></script>
+        <header>
+            <img src="./images/background-header.png" alt="Restaurant Header Image" class="header-image">
+            <h1>Delicious Food Resto</h1>
+        </header>
+        <main>
+            <section class="menu">
+                <h2>Menu</h2>
+                <ul class="menu-list" id="menu-list">
+                    <li class="menu-item">
+                        <div class="menu-left">
+                            <img src="./images/pizza.png" alt="Pizza" class="menu-image">
+                            <div class="menu-details">
+                                <h3 class="menu-name">Pizza</h3>
+                                <p class="menu-ingredients">pepperoni,mushrom,mozarella.</p>
+                                <span class="menu-price">$12.99</span>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-circle-plus plusIcon" data-id="0"></i>
+                    </li>
+                </ul>
+            </section>
+            <section class="your-order hidden" id="your-order">
+                <h2>Your Order</h2>
+                <ul class="order-list" id="order-list">
+                    <li class="order-item">
+                        <div class="order-left">
+                            <span class="order-name">Pizza</span>
+                            <span class="order-quantity">x1</span>
+                            <i class="fa-solid fa-circle-minus removeIcon" data-id="0"></i>
+                        </div>
+                        <span class="order-price">$12.99</span>
+                    </li>
+                    <!-- This is where the order items will be dynamically inserted -->
+                </ul>
+                <div class="order-summary" id="order-summary">
+                    <span class="order-total-text">Total Price:</span>
+                    <span class="order-total-price" id="total-price">$12.99</span>
+                </div>
+                <button class="order-button" id="order-button">Complete Order</button>
+            </section>
+            <section class="card-details modal hidden" id="card-details">
+                <div class="modal-content">
+                    <h2>Enter Card Details</h2>
+                    <form class="card-form">
+                        <label for="card-name">Name on Card</label>
+                        <input type="text" id="card-name" placeholder="John Doe" required>
+                        <label for="card-number">Card Number</label>
+                        <input type="text" id="card-number" placeholder="1234 5678 9012 3456" required>
+                        
+                        <label for="expiry-date">Expiry Date</label>
+                        <input type="text" id="expiry-date" placeholder="MM/YY" required>
+                        
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" placeholder="123" required>
+                        
+                        <button id="pay-button" type="submit">Pay</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+	<script src="index.js" type="module"></script>
     </body>
 </html>
 
